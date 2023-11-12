@@ -2,7 +2,7 @@ import React from "react";
 import boton from "./pantallas/boton";
 import inicio from "./pantallas/inicio";
 import mapa from "./pantallas/mapa";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
@@ -27,9 +27,9 @@ function TabGroup() {
         },
         })}
         >
-        <Tab.Screen name="inicio" component={Tabinicio} style={style.inicio}/> 
-        <Tab.Screen name="boton" component={Tabboton} style={style.boton}/>
-        <Tab.Screen name="mapa" component={Tabmapa} style={style.inicio}/>
+        <Tab.Screen name="inicio" component={inicio} /> 
+        <Tab.Screen name="boton" component={boton} />
+        <Tab.Screen name="mapa" component={mapa} />
         
         </Tab.Navigator> //Iconos de inicio, boton y mapa
     )
