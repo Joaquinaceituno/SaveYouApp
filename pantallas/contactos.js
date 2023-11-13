@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
 
-const ContactosScreen = () => {
+export default function Contacto(){
     const [contactos, setContactos] = useState([]);
     const [nombre, setNombre] = useState('');
     const [telefono, setTelefono] = useState('');
