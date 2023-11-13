@@ -49,3 +49,46 @@ const ContactosScreen = () => {
     </View>
   );
 };
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      paddingHorizontal: 20,
+    },
+    titulo: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      marginBottom: 20,
+    },
+    formulario: {
+      width: '100%',
+      marginBottom: 20,
+    },
+    input: {
+      width: '100%',
+      height: 40,
+      borderColor: 'gray',
+      borderWidth: 1,
+      marginBottom: 15,
+      paddingLeft: 10,
+    },
+    boton: {
+      backgroundColor: 'blue',
+      paddingVertical: 10,
+      paddingHorizontal: 20,
+      borderRadius: 5,
+    },
+    textoBoton: {
+      color: 'white',
+      fontSize: 16,
+      fontWeight: 'bold',
+    },
+    item: {
+      padding: 10,
+      borderBottomWidth: 1,
+      borderBottomColor: 'gray',
+      width: '100%',
+    },
+});
+  
