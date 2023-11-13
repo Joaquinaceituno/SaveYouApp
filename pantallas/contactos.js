@@ -13,3 +13,15 @@ const ContactosScreen = () => {
         setTelefono('');
       }
     };
+    return (
+        <View style={styles.container}>
+          <Text style={styles.titulo}>Lista de Contactos</Text>
+    
+          <View style={styles.formulario}>
+            <TextInput
+              style={styles.input}
+              placeholder="Nombre"
+              value={nombre}
+              onChangeText={setNombre}
+            />
+    
