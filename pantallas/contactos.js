@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
       fontSize: 24,
       fontWeight: 'bold',
       marginBottom: 20,
+      textAlign: 'center',
     },
     formulario: {
       width: '100%',
