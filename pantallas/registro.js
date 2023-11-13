@@ -15,3 +15,33 @@ export default function registro(){
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Registro</Text>
+
+      
+      <TextInput
+        style={styles.input}
+        placeholder="Nombre"
+        value={nombre}
+        onChangeText={setNombre}
+      />
+
+      <TextInput
+        style={styles.input}
+        placeholder="Email"
+        keyboardType="email-address"
+        value={email}
+        onChangeText={setEmail}
+      />
+
+      <TextInput
+        style={styles.input}
+        placeholder="Contraseña"
+        secureTextEntry={true}
+        value={contrasena}
+        onChangeText={setContrasena}
+      />
+            <TouchableOpacity style={styles.boton} onPress={handleRegistro}>
+        <Text style={styles.textoBoton}>Registrarse</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
