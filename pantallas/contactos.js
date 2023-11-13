@@ -24,4 +24,16 @@ const ContactosScreen = () => {
               value={nombre}
               onChangeText={setNombre}
             />
+   <TextInput
+          style={styles.input}
+          placeholder="Teléfono"
+          keyboardType="phone-pad"
+          value={telefono}
+          onChangeText={setTelefono}
+        />
+
+        <TouchableOpacity style={styles.boton} onPress={agregarContacto}>
+          <Text style={styles.textoBoton}>Agregar Contacto</Text>
+        </TouchableOpacity>
+      </View>
     
