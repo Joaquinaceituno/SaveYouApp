@@ -36,4 +36,16 @@ const ContactosScreen = () => {
           <Text style={styles.textoBoton}>Agregar Contacto</Text>
         </TouchableOpacity>
       </View>
-    
+      <FlatList
+        data={contactos}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <View style={styles.item}>
+            <Text>{item.nombre}</Text>
+            <Text>{item.telefono}</Text>
+          </View>
+        )}
+      />
+    </View>
+  );
+};
