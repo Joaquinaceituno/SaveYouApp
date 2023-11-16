@@ -44,21 +44,21 @@ export default function Login() {
       backgroundColor: '#f1f1f1',
       alignItems: 'center',
       justifyContent: 'center'
-    },
-    image: {
+      },
+      image: {
       width: 200,
       height: 200,
-    },
-    titulo: {
+      },
+      titulo: {
       fontSize: 30,
       color: '#34434D',
       fontWeight: 'bold',
-    },
-    subTitulo: {
+      },
+      subTitulo: {
       fontSize: 20,
       color: 'gray'
-    },
-    textInput: {
+      },
+      textInput: {
       borderWidth: 1,
       borderColor: 'black',
       paddingStart: 30,
@@ -67,16 +67,22 @@ export default function Login() {
       marginTop: 20,
       borderRadius: 30,
       backgroundColor: '#fff'
-    },
-    olvideContra: {
+      },
+      olvideContra: {
       fontSize: 16,
       marginTop: 10,
-    },
-    registrate: {
+      },
+      registrate: {
       fontSize: 12,
       marginTop: 20,
-    },
-
+      },
+      buttonRegister: {
+      width: 100,
+      height: 40,
+      backgroundcolor: '#000',
+      color: '#fff',
+      borderRadius: 5,
+      }
   });
   
   
