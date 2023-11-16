@@ -1,6 +1,6 @@
 import React from "react";
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, Image } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Navigation from "../navigation";
 
@@ -8,7 +8,12 @@ const Stack = createStackNavigator();
 
 export default function Login() {
   return (
+    
     <View style={styles.container}>
+      <Image
+        style={styles.image}
+        source={require("./../assets/logo.png")}
+      />
       <Text style={styles.titulo}>Login</Text>
       <Text style={styles.subTitulo}>Inicia Sesión</Text>
       <TextInput
@@ -29,7 +34,7 @@ export default function Login() {
         onPress={handleLogin}
       />
 
-      <Text style={styles.registrate}>¿No tienes una cuenta? <Button title="Regístrate"></Button></Text>
+      <Text style={styles.registrate}>¿No tienes una cuenta? <Text style={styles.registrateLink}>Regístrate</Text></Text>
     </View>
   );
 }
@@ -40,6 +45,10 @@ export default function Login() {
       backgroundColor: '#f1f1f1',
       alignItems: 'center',
       justifyContent: 'center'
+    },
+    image: {
+      width: 200,
+      height: 200,
     },
     titulo: {
       fontSize: 30,
