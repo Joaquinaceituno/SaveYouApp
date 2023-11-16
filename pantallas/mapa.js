@@ -32,6 +32,11 @@ export default function Mapa() {
                 coordinate={origin}
                 onDragEnd={(direction) => setOrigin(direction.nativeEvent.coordinate) }
                 />
+                <Marker 
+                draggable={true}
+                coordinate={destination}
+                onDragEnd={(direction) => setDestination(direction.nativeEvent.coordinate)}
+                />
 
             </MapView>
         </View>
