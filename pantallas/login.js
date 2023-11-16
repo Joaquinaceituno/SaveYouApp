@@ -74,7 +74,7 @@ export default function Login() {
       marginTop: 10,
     },
     registrate: {
-      fontSize: 16,
+      fontSize: 12,
       marginTop: 20,
     },
 
