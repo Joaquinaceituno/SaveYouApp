@@ -6,20 +6,21 @@ import MapView, {Marker, Polyline} from 'react-native-maps';
 import {GOOGLE_API_KEY} from '@env';
 
 export default function Mapa() {
-    const [origin, setOrigin] = react.useState({
+    const [origin, setOrigin] = react.useState({ //ubicacion predeterminada de inicio
         latitude: -38.951890,
         longitude: -68.059173,
     }) 
 
-    const [destination, setDestination]= react.useState({
+    const [destination, setDestination]= react.useState({ //ubicacion predeterminada de llegada
         latitude: -38.956585,
         longitude: -68.058960,
     })
 
     return (
-        <View style={styles.container}>
+        <View style={styles.container //contenedor de todo el mapa 
+    }> 
             
-            <MapView style={styles.map}
+            <MapView style={styles.map} //mapa
             initialRegion={{
                 latitude: origin.latitude,
                 longitude: origin.longitude,
@@ -27,17 +28,17 @@ export default function Mapa() {
                 longitudeDelta: 0.02,
             }}
             >
-                <Marker 
+                <Marker //marcador de inicio
                 draggable={true}
                 coordinate={origin}
                 onDragEnd={(direction) => setOrigin(direction.nativeEvent.coordinate) }
                 />
-                <Marker 
+                <Marker //marcador de llegada
                 draggable={true}
                 coordinate={destination}
                 onDragEnd={(direction) => setDestination(direction.nativeEvent.coordinate)}
                 />
-                <MapViewDirections
+                <MapViewDirections //ruta para ir de una direccion a otra
                     origin={origin}
                     destination={destination}
                     apikey={GOOGLE_API_KEY}
@@ -51,7 +52,7 @@ export default function Mapa() {
             )
     }
 
-    const styles = StyleSheet.create({
+    const styles = StyleSheet.create({ //estilos de contenedor y mapa
         container: {
             flex: 1,
             backgroundColor: '#fff',
