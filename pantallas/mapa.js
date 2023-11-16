@@ -10,4 +10,9 @@ export default function Mapa() {
         latitude: -38.951890,
         longitude: -68.059173,
     }) 
+
+    const [destination, setDestination]= react.useState({
+        latitude: -38.956585,
+        longitude: -68.058960,
+    })
 }
