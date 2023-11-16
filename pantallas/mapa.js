@@ -15,4 +15,23 @@ export default function Mapa() {
         latitude: -38.956585,
         longitude: -68.058960,
     })
-}
+
+    return (
+        <View style={styles.container}>
+            
+            <MapView style={styles.map}
+            initialRegion={{
+                latitude: origin.latitude,
+                longitude: origin.longitude,
+                latitudeDelta: 0.02,
+                longitudeDelta: 0.02,
+            }}
+            >
+
+            </MapView>
+        </View>
+
+            )
+    }
+
+
