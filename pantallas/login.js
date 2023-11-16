@@ -7,31 +7,32 @@ import Navigation from "../navigation";
 const Stack = createStackNavigator();
 
 export default function Login() {
-    return (
-        <View style={styles.container}>
-        <Text style={styles.titulo}>Login</Text>
-        <Text style={styles.subTitulo}>Inicia Sesión</Text>
-        <TextInput 
-          placeholder='Email'
-          style={styles.textInput}
-        />
-        <TextInput 
-          placeholder='Contraseña'
-          style={styles.textInput} keyboardType='visible-password'
-        />
-  
-        <Text style={styles.olvideContra}>Olvidé la Contraseña</Text>
-  
-        <Button
-          title="Iniciar sesión"
-          onPress={handleLogin}
-          
-        />
-  
-        <Text style={styles.registrate}>¿No tienes una cuenta? <Button title= "Regístrate"></Button></Text>
-      </View>
-    );
-  }
+  return (
+    <View style={styles.container}>
+      <Text style={styles.titulo}>Login</Text>
+      <Text style={styles.subTitulo}>Inicia Sesión</Text>
+      <TextInput
+        placeholder='Email'
+        style={styles.textInput}
+      />
+      <TextInput
+        placeholder='Contraseña'
+        style={styles.textInput}
+        keyboardType='visible-password'
+        secureTextEntry // Agrega esta línea para ocultar la contraseña
+      />
+
+      <Text style={styles.olvideContra}>Olvidé la Contraseña</Text>
+
+      <Button
+        title="Iniciar sesión"
+        onPress={handleLogin}
+      />
+
+      <Text style={styles.registrate}>¿No tienes una cuenta? <Button title="Regístrate"></Button></Text>
+    </View>
+  );
+}
   
   const styles = StyleSheet.create({
     container: {
@@ -70,7 +71,7 @@ export default function Login() {
 
   });
   
-  // Función para manejar la acción de iniciar sesión
+  
   function handleLogin() {
     // Aquí puedes implementar la lógica de inicio de sesión
     // Por ejemplo, puedes navegar a la pantalla de inicio después de iniciar sesión.
