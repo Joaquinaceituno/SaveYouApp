@@ -21,10 +21,9 @@ export default function Login() {
         style={styles.textInput}
       />
       <TextInput
-        placeholder='Contraseña'
-        style={styles.textInput}
-        keyboardType='visible-password'
-        secureTextEntry // Agrega esta línea para ocultar la contraseña
+      placeholder='Contraseña'
+      style={styles.textInput}
+      secureTextEntry // Agrega esta línea para ocultar la contraseña
       />
 
       <Text style={styles.olvideContra}>Olvidé la Contraseña</Text>
