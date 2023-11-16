@@ -27,6 +27,11 @@ export default function Mapa() {
                 longitudeDelta: 0.02,
             }}
             >
+                <Marker 
+                draggable={true}
+                coordinate={origin}
+                onDragEnd={(direction) => setOrigin(direction.nativeEvent.coordinate) }
+                />
 
             </MapView>
         </View>
