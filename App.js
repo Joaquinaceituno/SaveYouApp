@@ -9,6 +9,7 @@ import Registro from './pantallas/registro';
 export default function App() {
   return (
     <Navigation/>
+
   )
 
 }
