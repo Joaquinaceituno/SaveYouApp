@@ -8,7 +8,9 @@ function MyDrawer() {
   return(
     <NavigationContainer>
       <Drawer.Navigator>
-        
+        <Drawer.Screen name="Novedades" component={NovedadesScreen}/>
+        <Drawer.Screen name="Contactos" component={ContactosScreen}/>
+        <Drawer.Screen name="Perfil" component={PerfilScreen}/>
       </Drawer.Navigator>
     </NavigationContainer>
   )
