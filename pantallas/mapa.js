@@ -37,6 +37,13 @@ export default function Mapa() {
                 coordinate={destination}
                 onDragEnd={(direction) => setDestination(direction.nativeEvent.coordinate)}
                 />
+                <MapViewDirections
+                    origin={origin}
+                    destination={destination}
+                    apikey={GOOGLE_API_KEY}
+                    strokeColor='blue'
+                    strokeWidth={6} 
+                />
 
             </MapView>
         </View>
