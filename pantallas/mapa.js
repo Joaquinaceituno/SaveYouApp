@@ -6,5 +6,8 @@ import MapView, {Marker, Polyline} from 'react-native-maps';
 import {GOOGLE_API_KEY} from '@env';
 
 export default function Mapa() {
-   
+    const [origin, setOrigin] = react.useState({
+        latitude: -38.951890,
+        longitude: -68.059173,
+    }) 
 }
