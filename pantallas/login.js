@@ -33,7 +33,7 @@ export default function Login() {
         onPress={handleLogin}
       />
 
-      <Text style={styles.registrate}>¿No tienes una cuenta? <Text style={styles.registrateLink}>Regístrate</Text></Text>
+      <Text style={styles.registrate}>¿No tienes una cuenta? <Button title="Regístrate" style={styles.buttonRegister}/></Text>
     </View>
   );
 }
