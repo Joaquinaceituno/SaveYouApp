@@ -2,16 +2,16 @@ import React, {useState} from "react";
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Button, Image } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Navigation from "../navigation";
+import Registro from "./registro";
 import appFirebase from "../assets/credenciales";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "@firebase/auth";
+import { async } from "@firebase/util";
 const auth = getAuth(appFirebase)
 
 
 const Stack = createStackNavigator();
 
 export default function Login() {
-  const [registrado, setRegistrado] = useState(false)
   return (
     
     <View style={styles.container}>
@@ -24,19 +24,20 @@ export default function Login() {
       <TextInput
         placeholder='Email'
         style={styles.textInput}
+        id="email"
       />
       <TextInput
       placeholder='Contraseña'
       style={styles.textInput}
+      id="contra"
       secureTextEntry // Agrega esta línea para ocultar la contraseña
       />
 
       <Text style={styles.olvideContra}>Olvidé la Contraseña</Text>
 
-      <Button title="Iniciar sesión" onPress={() => console.log('Botón presionado')}
-        style={{ width: 100, height: 30 }}/>
+      <Button  title="Iniciar sesión"/>
 
-      <Text style={styles.registrate}>¿No tienes una cuenta? <Button title="Regístrate" /></Text>
+      <Text style={styles.registrate}>¿No tienes una cuenta? <Button  title="Regístrate" /></Text>
     </View>
   );
 }
@@ -76,8 +77,8 @@ export default function Login() {
       marginTop: 10,
       },
       registrate: {
-      fontSize: 12,
-      marginTop: 20,
+      fontSize: 20,
+      marginTop: 19,
       },
       button2: {
         width: 100,
