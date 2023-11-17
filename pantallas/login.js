@@ -3,10 +3,6 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Button, Image } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Registro from "./registro";
-import appFirebase from "../assets/credenciales";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "@firebase/auth";
-import { async } from "@firebase/util";
-const auth = getAuth(appFirebase)
 
 
 const Stack = createStackNavigator();
