@@ -3,9 +3,9 @@ import { View, Text} from 'react-native';
 
 const PerfilScreen = () => {
     return(
-       <View>
+       <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
 
-        
+
        </View>
 
     )
