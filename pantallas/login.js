@@ -77,7 +77,7 @@ export default function Login() {
       marginTop: 20,
       },
       buttonRegister: {
-      borderColor: 'stategray',
+      //borderColor: 'stategray',
       width: 100,
       height: 40,
       backgroundcolor: '#0D6EEFD',
