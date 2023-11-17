@@ -10,3 +10,5 @@ const PerfilScreen = () => {
     )
 
 }
+
+export default PerfilScreen
