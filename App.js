@@ -6,6 +6,7 @@ import 'react-native-gesture-handler'
 //firebase
 import appFirebase from './assets/credenciales';
 import {getAuth, onAuthStateChanged} from 'firebase/auth'
+const auth = getAuth(appFirebase)
 
 export default function App() {
   return (
