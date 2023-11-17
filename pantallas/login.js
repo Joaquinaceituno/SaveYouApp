@@ -1,12 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Button, Image } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Navigation from "../navigation";
+import appFirebase from "../assets/credenciales";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "@firebase/auth";
+const auth = getAuth(appFirebase)
+
 
 const Stack = createStackNavigator();
 
 export default function Login() {
+  const [registrado, setRegistrado] = useState(false)
   return (
     
     <View style={styles.container}>
@@ -28,9 +33,10 @@ export default function Login() {
 
       <Text style={styles.olvideContra}>Olvidé la Contraseña</Text>
 
-      <Button title="Iniciar sesión" style={styles.button2} onPress={handleLogin}/>
+      <Button title="Iniciar sesión" onPress={() => console.log('Botón presionado')}
+        style={{ width: 100, height: 30 }}/>
 
-      <Text style={styles.registrate}>¿No tienes una cuenta? <Button title="Regístrate" style={styles.button2}/></Text>
+      <Text style={styles.registrate}>¿No tienes una cuenta? <Button title="Regístrate" /></Text>
     </View>
   );
 }
@@ -74,14 +80,8 @@ export default function Login() {
       marginTop: 20,
       },
       button2: {
-        borderWidth: 1,
-        borderColor: 'black',
-        paddingStart: 30,
-        padding: 10,
-        width: '80%',
-        marginTop: 20,
-        borderRadius: 30,
-        backgroundColor: '#fff'
+        width: 100,
+        height: 20,
       }
   });
   
@@ -91,5 +91,6 @@ export default function Login() {
     // Por ejemplo, puedes navegar a la pantalla de inicio después de iniciar sesión.
 
   }
+  
   
   
