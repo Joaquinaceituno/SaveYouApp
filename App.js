@@ -14,9 +14,9 @@ import {getAuth, onAuthStateChanged} from 'firebase/auth'
 
 export default function App() {
   return (
-    <NavigationContainer>
+    
       <Login />
-    </NavigationContainer>
+    
   )
 
 }
