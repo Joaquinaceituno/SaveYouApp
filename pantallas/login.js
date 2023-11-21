@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Button, Image } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Navigation from "../navigation";
+import Registro from "./registro";
+
 
 const Stack = createStackNavigator();
 
@@ -19,21 +20,20 @@ export default function Login() {
       <TextInput
         placeholder='Email'
         style={styles.textInput}
+        id="email"
       />
       <TextInput
       placeholder='Contraseña'
       style={styles.textInput}
+      id="contra"
       secureTextEntry // Agrega esta línea para ocultar la contraseña
       />
 
       <Text style={styles.olvideContra}>Olvidé la Contraseña</Text>
 
-      <Button
-        title="Iniciar sesión"
-        onPress={handleLogin}
-      />
+      <Button  title="Iniciar sesión"/>
 
-      <Text style={styles.registrate}>¿No tienes una cuenta? <Button title="Regístrate" style={styles.buttonRegister}/></Text>
+      <Text style={styles.registrate}>¿No tienes una cuenta? <Button  title="Regístrate" /></Text>
     </View>
   );
 }
@@ -73,15 +73,12 @@ export default function Login() {
       marginTop: 10,
       },
       registrate: {
-      fontSize: 12,
-      marginTop: 20,
+      fontSize: 20,
+      marginTop: 19,
       },
-      buttonRegister: {
-      width: 100,
-      height: 40,
-      backgroundcolor: '#000',
-      color: '#fff',
-      borderRadius: 5,
+      button2: {
+        width: 100,
+        height: 20,
       }
   });
   
@@ -91,5 +88,6 @@ export default function Login() {
     // Por ejemplo, puedes navegar a la pantalla de inicio después de iniciar sesión.
 
   }
+  
   
   
