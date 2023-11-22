@@ -18,21 +18,7 @@ import { firebaseConfig } from './firebase-config';
 
 export default function App() {
   return (
-<<<<<<< HEAD
-    
-=======
-
     <Login />
-    
-  )
-
-
-    <NavigationContainer>
->>>>>>> d30486368b6ce94fd7ecc13a271c6e66d7f18b26
-      <Login />
-    
-  )
-
-
+)
 }
 
