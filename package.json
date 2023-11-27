@@ -17,11 +17,9 @@
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",
     "@react-navigation/stack": "^6.3.20",
-<<<<<<< HEAD
-    "expo": "~49.0.15",
-=======
+
     "expo": "^49.0.20",
->>>>>>> 1bbb01758f1c0c521f6127c10ec5e8396de15e69
+
     "expo-location": "~16.1.0",
     "expo-status-bar": "~1.6.0",
     "firebase": "^10.6.0",
