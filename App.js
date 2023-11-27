@@ -11,28 +11,16 @@ import Navigation from './navigation';
 
 
 import { NavigationContainer } from '@react-navigation/native';
-import 'react-native-gesture-handler'
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "@firebase/auth";
-import { initializeApp } from '@firebase/app';
-import { firebaseConfig } from './firebase-config';
+import 'react-native-gesture-handler';
+
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { initializeApp } from 'firebase/app';
+
+
+
 
 export default function App() {
   return (
-<<<<<<< HEAD
-    
-=======
-
     <Login />
-    
-  )
-
-
-    <NavigationContainer>
->>>>>>> d30486368b6ce94fd7ecc13a271c6e66d7f18b26
-      <Login />
-    
-  )
-
-
+  );
 }
-
