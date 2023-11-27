@@ -22,9 +22,5 @@ import { initializeApp } from 'firebase/app';
 export default function App() {
   return (
     <Login />
-<<<<<<< HEAD
-  );
-=======
-)
->>>>>>> 167516e290e05eb4f27f3a927132b5951099f3ea
+  )
 }
