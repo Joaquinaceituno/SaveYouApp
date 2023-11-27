@@ -22,8 +22,13 @@ import { initializeApp } from 'firebase/app';
 export default function App() {
   return (
     <Login />
+<<<<<<< HEAD
   );
 }
 
 
 
+=======
+  )
+}
+>>>>>>> 1bbb01758f1c0c521f6127c10ec5e8396de15e69

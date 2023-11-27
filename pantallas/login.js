@@ -1,35 +1,39 @@
-import React from "react";
+import React, {useState} from "react";
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, Image } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Navigation from "../navigation";
+import Registro from "./registro";
+
 
 const Stack = createStackNavigator();
 
 export default function Login() {
   return (
+    
     <View style={styles.container}>
+      <Image
+        style={styles.image}
+        source={require("./../assets/logo.png")}
+      />
       <Text style={styles.titulo}>Login</Text>
       <Text style={styles.subTitulo}>Inicia Sesión</Text>
       <TextInput
         placeholder='Email'
         style={styles.textInput}
+        id="email"
       />
       <TextInput
-        placeholder='Contraseña'
-        style={styles.textInput}
-        keyboardType='visible-password'
-        secureTextEntry // Agrega esta línea para ocultar la contraseña
+      placeholder='Contraseña'
+      style={styles.textInput}
+      id="contra"
+      secureTextEntry // Agrega esta línea para ocultar la contraseña
       />
 
       <Text style={styles.olvideContra}>Olvidé la Contraseña</Text>
 
-      <Button
-        title="Iniciar sesión"
-        onPress={handleLogin}
-      />
+      <Button  title="Iniciar sesión"/>
 
-      <Text style={styles.registrate}>¿No tienes una cuenta? <Button title="Regístrate"></Button></Text>
+      <Text style={styles.registrate}>¿No tienes una cuenta? <Button  title="Regístrate" /></Text>
     </View>
   );
 }
@@ -40,17 +44,21 @@ export default function Login() {
       backgroundColor: '#f1f1f1',
       alignItems: 'center',
       justifyContent: 'center'
-    },
-    titulo: {
+      },
+      image: {
+      width: 200,
+      height: 200,
+      },
+      titulo: {
       fontSize: 30,
       color: '#34434D',
       fontWeight: 'bold',
-    },
-    subTitulo: {
+      },
+      subTitulo: {
       fontSize: 20,
       color: 'gray'
-    },
-    textInput: {
+      },
+      textInput: {
       borderWidth: 1,
       borderColor: 'black',
       paddingStart: 30,
@@ -59,16 +67,19 @@ export default function Login() {
       marginTop: 20,
       borderRadius: 30,
       backgroundColor: '#fff'
-    },
-    olvideContra: {
+      },
+      olvideContra: {
       fontSize: 16,
       marginTop: 10,
-    },
-    registrate: {
-      fontSize: 16,
-      marginTop: 20,
-    }
-
+      },
+      registrate: {
+      fontSize: 20,
+      marginTop: 19,
+      },
+      button2: {
+        width: 100,
+        height: 20,
+      }
   });
   
   
@@ -77,5 +88,6 @@ export default function Login() {
     // Por ejemplo, puedes navegar a la pantalla de inicio después de iniciar sesión.
 
   }
+  
   
   

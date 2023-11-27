@@ -2,6 +2,7 @@ module.exports = function(api) {
   api.cache(true);
   return {
     presets: ['babel-preset-expo'],
+<<<<<<< HEAD
     plugins: [
       ["module:react-native-dotenv", {
         "moduleName": "@env",
@@ -12,5 +13,8 @@ module.exports = function(api) {
         "allowUndefined": true
       }]
     ]
+=======
+    plugins:['react-native-reanimated/plugin'] 
+>>>>>>> 1bbb01758f1c0c521f6127c10ec5e8396de15e69
   };
 };
